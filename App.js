@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, Button, TextInput, Alert} from 'react-native';
-import {Styles} from './Styles';
+import {Text, View, Button, TextInput, StyleSheet} from 'react-native';
 
 export default class App extends Component{
   constructor(){
@@ -37,13 +36,9 @@ analyzeWord = () => {
       <View style={Styles.container}>
         <View style={Styles.container}>
         <Text style={Styles.welcome}>A Word Analyzer</Text>
-        </View>
-        <View style={Styles.container}>
         <TextInput onChangeText={(input) => this.setState({input})} style={Styles.instructions} placeholder='Input text'/>
         <Text></Text>
         <Text></Text>
-        </View>
-        <View style={Styles.container}>
         <Button color="#FF0000" onPress={this.analyzeWord} title='Analyze'/>
         <Text></Text>
         <Text style={Styles.instructions}>Words                     : {this.state.input}</Text>
@@ -55,3 +50,21 @@ analyzeWord = () => {
     );
   }
 }
+const Styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+  },
+  welcome: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    margin: 5,
+  },
+  instructions: {
+    textAlign: 'center',
+    marginBottom: 5,
+  },
+});
