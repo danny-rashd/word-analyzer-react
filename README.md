@@ -1,14 +1,13 @@
-# WordAnalyzer
-Class Activity - Developing React Native App (Word Analyzer)
+## Class Activity - Developing React Native App: Word Analyzer
 
+The Word Analyzer app I have developed is a simple yet effective tool for analyzing words.
 
-The word analyzer app that I did is a rather simplistic in terms of design.
+To ensure a clean initial display of the output (vowel, consonant, character), I have initialized all variables as empty strings ('') instead of '0' using the super() method.
 
-For the super (), i initialized all the variables as '' instead of '0'because i wanted the initial display of the output (vowel, consonant,character) to be empty instead of showing '0' from the very start.
+Within the Analyzeword() function, I use let to declare and initialize the counting variables as 0, which allows me to start counting vowels, consonants, and characters from the beginning. The length of the input word is stored in the char variable to determine the total number of characters.
 
-In the Analyzeword(), i use the let to declare & initialize the variables as 0 to start the counter (counting vowels, consonants and characters). The length of the input word into 'char' for the total number of characters.
+I have employed a for loop to count the vowels and consonants. By using an if statement, I accurately identify and count the vowels (including both lowercase and uppercase). For the remaining alphabets, I utilize an else if statement. This approach allows me to distinguish between vowels and consonants while excluding spaces and numbers from the count using the else statement.
 
-I use the for loop to count the vowels and consonants, 'if' for the vowel(a,e,i,o,u in both lowercase and uppercase) and 'else if'(the rest of the alphabets in both lowercase and uppercase). The reason why i use 'if' and 'else if' instead of 'if' & 'else' is because i want to make a distinction between vowels and consonant while also not counting the 'spaces' and numbers in the 'else' whenever the input has been entered.
+The output of the app presents the count of vowels and consonants as a unified total, regardless of whether they are uppercase or lowercase. Additionally, the count of total characters includes spaces within the word.
 
-In the output, it can be observed that the vowels and consonants are counted as one whether it is uppercase or lowecase. Also, the total number of characters also counts the spaces in the word.
-
+With its straightforward design and efficient word analysis capabilities, the Word Analyzer app offers a valuable tool for users seeking to examine the composition of words.
